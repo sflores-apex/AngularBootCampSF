@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class TaskTwoComponent {
 
+  protected letters: string[] = ['A', 'B', 'C'];
+
 }

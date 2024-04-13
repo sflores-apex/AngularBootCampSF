@@ -1,1 +1,33 @@
-<p>task-two works!</p>
+<div class="p-3">
+  <h2>NgFor</h2>
+
+  <ul>
+    <li *ngFor="let letter of letters">
+      {{ letter }}
+    </li>
+  </ul>
+</div>
+
+<div class="p-3">
+  <h2>NgIf</h2>
+
+  <ul>
+    <ng-container *ngFor="let letter of letters">
+      <li *ngIf="letter !== 'B'">
+        {{ letter }}
+      </li>
+    </ng-container>
+  </ul>
+</div>
+
+<div class="p-3">
+  <h2>NgSwitch</h2>
+
+  <ul>
+    <ng-container *ngFor="let letter of letters" [ngSwitch]="letter">
+      <li *ngSwitchCase="'A'">1</li>
+      <li *ngSwitchCase="'B'">2</li>
+      <li *ngSwitchCase="'C'">3</li>
+    </ng-container>
+  </ul>
+</div>
