@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TaskFourComponent {
 
+  protected inputText: string = 'Hello World';
+
+  protected onClick(): void {
+    alert('I was triggered by an event');
+  }
 }
