@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TaskOneComponent {
 
+  protected active: boolean = false;
+  protected activeByStyle: boolean = false;
+
 }
