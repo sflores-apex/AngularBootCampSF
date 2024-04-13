@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { TasksComponent } from './tasks.component';
 import { TaskNineComponent } from './task-nine/task-nine.component';
+import { TasksRoutingModule } from './tasks-routing.module';
+import { TasksComponent } from './tasks.component';
 
 @NgModule({
   declarations: [
@@ -9,10 +10,8 @@ import { TaskNineComponent } from './task-nine/task-nine.component';
     TaskNineComponent
   ],
   imports: [
-    CommonModule
-  ],
-  exports: [
-    TasksComponent
+    CommonModule,
+    TasksRoutingModule
   ]
 })
 export class TasksModule { }
