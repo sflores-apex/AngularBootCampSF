@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { TaskSixModule } from './task-six/task-six.module';
 import { TasksComponent } from './tasks.component';
 
 @NgModule({
@@ -7,7 +8,8 @@ import { TasksComponent } from './tasks.component';
     TasksComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TaskSixModule
   ],
   exports: [
     TasksComponent
