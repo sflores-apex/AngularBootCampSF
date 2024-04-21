@@ -8,6 +8,9 @@ import { ListPaginationComponent } from './list-pagination.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ListPaginationComponent
   ]
 })
 export class ListPaginationModule { }
