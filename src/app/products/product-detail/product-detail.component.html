@@ -11,7 +11,7 @@
     <span> Prices: </span>
     <ul class="mb-1">
       <li *ngFor="let price of product.prices| keyvalue">
-        {{ price.key }}: {{ price.value }}
+        {{ price.key }}: {{ price.value | roundUp | currency }}
       </li>
     </ul>
   </div>
