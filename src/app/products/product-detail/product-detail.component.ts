@@ -24,4 +24,8 @@ export class ProductDetailComponent {
 
   constructor(private readonly route: ActivatedRoute, private readonly productsService: ProductsService) { }
 
+  protected getDiscountPrice(price: number, discount: number): number {
+    return price - (price * (discount / 100));
+  }
+
 }

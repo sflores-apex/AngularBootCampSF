@@ -10,7 +10,8 @@
       "https://api.slingacademy.com/public/sample-photos/1.jpeg",
       "https://api.slingacademy.com/public/sample-photos/2.jpeg"
     ],
-    "description": "Description of Product a1"
+    "description": "Description of Product a1",
+    "offerDiscount": 50
   },
   {
     "id": "a2",
@@ -64,7 +65,8 @@
       "https://api.slingacademy.com/public/sample-photos/13.jpeg",
       "https://api.slingacademy.com/public/sample-photos/14.jpeg"
     ],
-    "description": "Description of Product a5"
+    "description": "Description of Product a5",
+    "offerDiscount": 10
   },
   {
     "id": "a6",
@@ -107,7 +109,8 @@
       "https://api.slingacademy.com/public/sample-photos/22.jpeg",
       "https://api.slingacademy.com/public/sample-photos/24.jpeg"
     ],
-    "description": "Description of Product a8"
+    "description": "Description of Product a8",
+    "offerDiscount": 70
   },
   {
     "id": "a9",
@@ -241,7 +244,8 @@
       "https://api.slingacademy.com/public/sample-photos/59.jpeg",
       "https://api.slingacademy.com/public/sample-photos/60.jpeg"
     ],
-    "description": "Description of Product a18"
+    "description": "Description of Product a18",
+    "offerDiscount": 50
   },
   {
     "id": "a19",

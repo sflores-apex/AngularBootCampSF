@@ -11,7 +11,13 @@
     <span> Prices: </span>
     <ul class="mb-1">
       <li *ngFor="let price of product.prices| keyvalue">
-        {{ price.key }}: {{ price.value | roundUp | currency }}
+        {{ price.key }}:
+        <span [ngClass]="{'original-price': !!product.offerDiscount}">
+          {{ price.value | roundUp | currency }}
+        </span>
+        <span *ngIf="!!product.offerDiscount" class="discount-price ms-2">
+          {{ getDiscountPrice(price.value, product.offerDiscount) | currency }}
+        </span>
       </li>
     </ul>
   </div>

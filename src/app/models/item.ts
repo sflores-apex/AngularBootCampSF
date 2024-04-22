@@ -6,4 +6,5 @@ export interface Item {
   },
   photos: string[];
   description: string;
+  offerDiscount?: number;
 }
