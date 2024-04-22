@@ -1,8 +1,15 @@
 <h1 class="title">Product List</h1>
 
 <div class="d-flex flex-column">
+
+  <div class="mb-4">
+    <label for="filterValue" class="form-label">Product Filter</label>
+    <input type="text" class="form-control" id="filterValue" [(ngModel)]="filterValue"
+      placeholder="Search for a product by title">
+  </div>
+
   <ul>
-    <li *ngFor="let product of paginatedProducts$ | async" class="mb-2">
+    <li *ngFor="let product of paginatedProducts$ | async | listFiltering: filterValue : 'title'" class="mb-2">
       <img [src]="product.photos[0]" width="30" height="30" />
       <strong class="w-25 d-inline-block text-center">{{ product.title }}</strong>
       <a [routerLink]="product.id" class="link-underline-primary">Go to Detail</a>
