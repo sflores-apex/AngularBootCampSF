@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable, catchError, of, switchMap } from 'rxjs';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Observable, catchError, of } from 'rxjs';
 import { Item } from '../../models/item';
 import { ProductsService } from '../../services/products.service';
 
@@ -11,18 +11,20 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductDetailComponent {
 
-  protected productById$: Observable<Item | undefined> = this.route.paramMap.pipe(
-    switchMap(params => {
-      const idProduct = String(params.get('id'));
-      return this.productsService.productById$(idProduct);
-    }),
-    catchError((error: Error): Observable<Item | undefined> => {
+  protected productById$: Observable<Item> = this.productsService.productDetail$.pipe(
+    catchError((error: Error): Observable<Item> => {
       console.error('There was an error retrieving the product: %0', error);
-      return of(undefined);
+      return of({} as Item);
     })
   );
 
   constructor(private readonly route: ActivatedRoute, private readonly productsService: ProductsService) { }
+
+  public ngAfterViewInit(): void {
+    this.route.params.subscribe((params: Params): void => {
+      this.productsService.selectProduct(params['id']);
+    });
+  }
 
   protected getDiscountPrice(price: number, discount: number): number {
     return price - (price * (discount / 100));
