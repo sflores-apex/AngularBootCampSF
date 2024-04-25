@@ -10,12 +10,10 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductListComponent {
 
-  private paginationSubject$$: Subject<number> = new Subject<number>();
-  private pagination$: Observable<number> = this.paginationSubject$$.asObservable();
   private offersSubject$$: Subject<boolean> = new Subject<boolean>();
   private offers$: Observable<boolean> = this.offersSubject$$.asObservable();
 
-  protected filterValue: string = '';
+  protected selectedPage: number = 1;
 
   protected products$: Observable<Item[]> = this.productsService.products$.pipe(
     catchError((error: Error): Observable<Item[]> => {
@@ -32,24 +30,11 @@ export class ProductListComponent {
       : Item[] => !offers ? products : products.filter(p => !!p?.offerDiscount))
   );
 
-  protected paginatedProducts$: Observable<Item[]> = combineLatest({
-    pagination: this.pagination$.pipe(startWith(0)),
-    productsOffered: this.productsOffered$,
-  }).pipe(
-    map(({ pagination, productsOffered }: { pagination: number; productsOffered: Item[]; })
-      : Item[] => productsOffered.slice(pagination, pagination + 5)
-    )
-  );
-
   constructor(private readonly productsService: ProductsService) { }
-
-  protected paginateBy(page: number): void {
-    this.paginationSubject$$.next(page);
-  }
 
   protected showOnlyOffers(e: Event): void {
     this.offersSubject$$.next((e.target as HTMLInputElement).checked);
-    this.paginationSubject$$.next(0);
+    this.selectedPage = 1;
   }
 
 }

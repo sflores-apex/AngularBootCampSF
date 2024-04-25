@@ -1,20 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ListFilteringPipe } from './list-filtering.pipe';
+import { PagingListPipe } from './paging-list.pipe';
 import { RoundUpPipe } from './round-up.pipe';
-
-
 
 @NgModule({
   declarations: [
-    ListFilteringPipe,
+    PagingListPipe,
     RoundUpPipe
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ListFilteringPipe,
+    PagingListPipe,
     RoundUpPipe
   ]
 })

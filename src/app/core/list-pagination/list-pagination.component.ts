@@ -6,16 +6,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './list-pagination.component.scss'
 })
 export class ListPaginationComponent {
-  @Input() list: any[] | null = [];
+  @Input() listLength: number = 0;
   @Output() paginate = new EventEmitter<number>();
 
   get paginationBtnsCount(): number[] {
-    if (!this.list) {
+    if (!this.listLength) {
       return [];
     }
 
-    const btnCount = Math.ceil(this.list?.length / 5)
-    return Array.from(Array(btnCount).keys()).map(count => count * 5);
+    const btnCount = Math.ceil(this.listLength / 5)
+    return [...Array(btnCount).keys()].map(i => i + 1);;
   }
 
   protected goToPage(page: number): void {

@@ -2,12 +2,6 @@
 
 <div class="d-flex flex-column">
 
-  <div class="mb-4">
-    <label for="filterValue" class="form-label">Product Filter</label>
-    <input type="text" class="form-control" id="filterValue" [(ngModel)]="filterValue"
-      placeholder="Search for a product by title">
-  </div>
-
   <div class="form-check mb-4">
     <input class="form-check-input" type="checkbox" value="false" id="Offers" (change)="showOnlyOffers($event)">
     <label class="form-check-label" for="Offers">
@@ -16,12 +10,13 @@
   </div>
 
   <ul>
-    <li *ngFor="let product of paginatedProducts$ | async | listFiltering: filterValue : 'title'" class="mb-2">
+    <li *ngFor="let product of productsOffered$ | async | pagingList: selectedPage" class="mb-2">
       <img [src]="product.photos[0]" width="30" height="30" />
       <strong class="w-25 d-inline-block text-center">{{ product.title }}</strong>
       <a [routerLink]="product.id" class="link-underline-primary">Go to Detail</a>
     </li>
   </ul>
 
-  <app-list-pagination class="align-self-center" [list]="productsOffered$ | async" (paginate)="paginateBy($event)" />
+  <app-list-pagination class="align-self-center" [listLength]="(productsOffered$ | async)?.length || 0"
+    (paginate)="selectedPage = $event" />
 </div>
