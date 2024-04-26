@@ -1,0 +1,20 @@
+<div class="p-3">
+  <h2>Event Binding</h2>
+
+  <button type="button" class="btn btn-primary" (click)="onClick()">Click Me</button>
+</div>
+
+<div class="p-3">
+  <h2>One Way Data Binding</h2>
+
+  <input type="text" [value]="inputText" />
+</div>
+
+<div class="p-3">
+  <h2>Two Way Data Binding</h2>
+
+  <span>{{ inputText }}</span>
+  <div class="w-25 py-2">
+    <input type="text" class="form-control" [(ngModel)]="inputText" />
+  </div>
+</div>
