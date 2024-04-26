@@ -8,9 +8,6 @@ import { TasksComponent } from './tasks.component';
   ],
   imports: [
     CommonModule
-  ],
-  exports: [
-    TasksComponent
   ]
 })
 export class TasksModule { }
