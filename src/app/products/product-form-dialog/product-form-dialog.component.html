@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>New Product</h2>
+
+<mat-dialog-content>
+
+  <form class="d-flex flex-column">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <fieldset>
+      <legend>Prices</legend>
+      <mat-form-field>
+        <mat-label>Tag</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </fieldset>
+
+    <fieldset>
+      <legend>Photos</legend>
+      <mat-form-field>
+        <mat-label>Url</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </fieldset>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Offer Discount?</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+  </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions [align]="'end'">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="saveProduct()" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

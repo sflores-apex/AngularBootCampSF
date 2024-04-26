@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { ListPaginationModule } from '../core/list-pagination/list-pagination.module';
 import { PipesModule } from '../core/pipes/pipes.module';
@@ -19,7 +20,8 @@ import { ProductsRoutingModule } from './products-routing.module';
     ProductsRoutingModule,
     ListPaginationModule,
     FormsModule,
-    PipesModule
+    PipesModule,
+    MatDialogModule
   ],
   providers: [
     ProductsService

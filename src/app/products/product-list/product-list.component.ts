@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Observable, Subject, catchError, combineLatest, map, of, startWith } from 'rxjs';
+
 import { Item } from '../../models/item';
 import { ProductsService } from '../../services/products.service';
+import { ProductFormDialogComponent } from '../product-form-dialog/product-form-dialog.component';
 
 @Component({
   selector: 'app-product-list',
@@ -30,11 +33,17 @@ export class ProductListComponent {
       : Item[] => !offers ? products : products.filter(p => !!p?.offerDiscount))
   );
 
-  constructor(private readonly productsService: ProductsService) { }
+  constructor(private readonly productsService: ProductsService, private dialog: MatDialog) { }
 
   protected showOnlyOffers(e: Event): void {
     this.offersSubject$$.next((e.target as HTMLInputElement).checked);
     this.selectedPage = 1;
+  }
+
+  protected openFormDialog(): void {
+    this.dialog.open(ProductFormDialogComponent, {
+      disableClose: true
+    });
   }
 
 }
