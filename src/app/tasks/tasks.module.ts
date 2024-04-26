@@ -12,9 +12,6 @@ import { TasksComponent } from './tasks.component';
   imports: [
     CommonModule,
     FormsModule
-  ],
-  exports: [
-    TasksComponent
   ]
 })
 export class TasksModule { }
