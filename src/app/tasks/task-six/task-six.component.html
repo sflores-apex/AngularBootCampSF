@@ -1,0 +1,18 @@
+<div class="p-3">
+  <h2>Module Providers Injectable</h2>
+
+  <ul>
+    <li *ngFor="let n of injectableByModuleService.numbers">
+      {{ n }}
+    </li>
+  </ul>
+</div>
+
+<div class="p-3">
+  <h2>Root Injectable</h2>
+
+  <h4>This component instance</h4>
+  <span>{{ injectableByRootService.persistentData }}</span>
+
+  <app-sample />
+</div>
