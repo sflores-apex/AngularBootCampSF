@@ -1,0 +1,274 @@
+[
+  {
+    "id": "a1",
+    "title": "Product a1",
+    "prices": {
+      "size1": 18.9,
+      "size2": 22.6
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/1.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/2.jpeg"
+    ],
+    "description": "Description of Product a1",
+    "offerDiscount": 50
+  },
+  {
+    "id": "a2",
+    "title": "Product a2",
+    "prices": {
+      "size1": 88.1,
+      "size2": 12.55,
+      "size3": 55.12
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/4.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/5.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/6.jpeg"
+    ],
+    "description": "Description of Product a2"
+  },
+  {
+    "id": "a3",
+    "title": "Product a3",
+    "prices": {
+      "size1": 41.1,
+      "size2": 15.1
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/7.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/8.jpeg"
+    ],
+    "description": "Description of Product a3"
+  },
+  {
+    "id": "a4",
+    "title": "Product a4",
+    "prices": {
+      "size1": 18.9,
+      "size2": 123.2
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/10.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/11.jpeg"
+    ],
+    "description": "Description of Product a4"
+  },
+  {
+    "id": "a5",
+    "title": "Product a5",
+    "prices": {
+      "size1": 1.24,
+      "size2": 22.6
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/13.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/14.jpeg"
+    ],
+    "description": "Description of Product a5",
+    "offerDiscount": 10
+  },
+  {
+    "id": "a6",
+    "title": "Product a6",
+    "prices": {
+      "size1": 18.9,
+      "size2": 22.6,
+      "size3": 11.33
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/16.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/17.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/18.jpeg"
+    ],
+    "description": "Description of Product a6"
+  },
+  {
+    "id": "a7",
+    "title": "Product a7",
+    "prices": {
+      "size1": 18.9,
+      "size2": 22.6,
+      "size3": 99.1
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/19.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/20.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/21.jpeg"
+    ],
+    "description": "Description of Product a7"
+  },
+  {
+    "id": "a8",
+    "title": "Product a8",
+    "prices": {
+      "size1": 19.75,
+      "size2": 22.6
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/22.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/24.jpeg"
+    ],
+    "description": "Description of Product a8",
+    "offerDiscount": 70
+  },
+  {
+    "id": "a9",
+    "title": "Product a9",
+    "prices": {
+      "size1": 18.9,
+      "size2": 22.6,
+      "size3": 83.1
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/25.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/26.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/37.jpeg"
+    ],
+    "description": "Description of Product a1"
+  },
+  {
+    "id": "a10",
+    "title": "Product a10",
+    "prices": {
+      "size1": 18.9,
+      "size2": 91.2
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/38.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/40.jpeg"
+    ],
+    "description": "Description of Product a10"
+  },
+  {
+    "id": "a11",
+    "title": "Product a11",
+    "prices": {
+      "size1": 72.1,
+      "size2": 22.6
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/41.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/42.jpeg"
+    ],
+    "description": "Description of Product a11"
+  },
+  {
+    "id": "a12",
+    "title": "Product a12",
+    "prices": {
+      "size1": 18.9,
+      "size2": 12.8
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/44.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/46.jpeg"
+    ],
+    "description": "Description of Product a12"
+  },
+  {
+    "id": "a13",
+    "title": "Product a13",
+    "prices": {
+      "size1": 14.1,
+      "size2": 22.6
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/48.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/49.jpeg"
+    ],
+    "description": "Description of Product a13"
+  },
+  {
+    "id": "a14",
+    "title": "Product a14",
+    "prices": {
+      "size1": 18.9,
+      "size2": 98.7
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/50.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/51.jpeg"
+    ],
+    "description": "Description of Product a14"
+  },
+  {
+    "id": "a15",
+    "title": "Product a15",
+    "prices": {
+      "size1": 18.9,
+      "size2": 22.6
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/52.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/53.jpeg"
+    ],
+    "description": "Description of Product a15"
+  },
+  {
+    "id": "a16",
+    "title": "Product a16",
+    "prices": {
+      "size1": 18.9,
+      "size2": 72.1
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/54.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/55.jpeg"
+    ],
+    "description": "Description of Product a16"
+  },
+  {
+    "id": "a17",
+    "title": "Product a17",
+    "prices": {
+      "size1": 37.1,
+      "size2": 22.6
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/56.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/57.jpeg"
+    ],
+    "description": "Description of Product a17"
+  },
+  {
+    "id": "a18",
+    "title": "Product a18",
+    "prices": {
+      "size1": 18.9,
+      "size2": 22.6,
+      "size3": 6.33
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/58.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/59.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/60.jpeg"
+    ],
+    "description": "Description of Product a18",
+    "offerDiscount": 50
+  },
+  {
+    "id": "a19",
+    "title": "Product a19",
+    "prices": {
+      "size1": 18.9,
+      "size2": 88.1
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/61.jpeg",
+      "https://api.slingacademy.com/public/sample-photos/62.jpeg"
+    ],
+    "description": "Description of Product a19"
+  },
+  {
+    "id": "a20",
+    "title": "Product a20",
+    "prices": {
+      "size1": 18.9
+    },
+    "photos": [
+      "https://api.slingacademy.com/public/sample-photos/63.jpeg"
+    ],
+    "description": "Description of Product a20"
+  }
+]

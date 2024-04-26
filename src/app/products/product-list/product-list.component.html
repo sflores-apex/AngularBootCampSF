@@ -1,0 +1,22 @@
+<h1 class="title">Product List</h1>
+
+<div class="d-flex flex-column">
+
+  <div class="form-check mb-4">
+    <input class="form-check-input" type="checkbox" value="false" id="Offers" (change)="showOnlyOffers($event)">
+    <label class="form-check-label" for="Offers">
+      Offers
+    </label>
+  </div>
+
+  <ul>
+    <li *ngFor="let product of productsOffered$ | async | pagingList: selectedPage" class="mb-2">
+      <img [src]="product.photos[0]" width="30" height="30" />
+      <strong class="w-25 d-inline-block text-center">{{ product.title }}</strong>
+      <a [routerLink]="product.id" class="link-underline-primary">Go to Detail</a>
+    </li>
+  </ul>
+
+  <app-list-pagination class="align-self-center" [listLength]="(productsOffered$ | async)?.length || 0"
+    (paginate)="selectedPage = $event" />
+</div>

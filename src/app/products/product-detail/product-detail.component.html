@@ -1,0 +1,36 @@
+<h1>Product Detail</h1>
+<div *ngIf="productById$ | async as product">
+  <strong> {{ product.title }}</strong>
+
+  <div>
+    <span> ID: </span>
+    <span> {{ product.id }} </span>
+  </div>
+
+  <div>
+    <span> Prices: </span>
+    <ul class="mb-1">
+      <li *ngFor="let price of product.prices| keyvalue">
+        {{ price.key }}:
+        <span [ngClass]="{'original-price': !!product.offerDiscount}">
+          {{ price.value | roundUp | currency }}
+        </span>
+        <span *ngIf="!!product.offerDiscount" class="discount-price ms-2">
+          {{ getDiscountPrice(price.value, product.offerDiscount) | currency }}
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <span> Photos: </span>
+    <ng-container *ngFor="let photo of product.photos">
+      <img [src]="photo" width="30" height="30" class="me-2" />
+    </ng-container>
+  </div>
+
+  <div>
+    <span> Description: </span>
+    <span> {{ product.description }} </span>
+  </div>
+</div>
