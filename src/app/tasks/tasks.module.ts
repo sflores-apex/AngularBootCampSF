@@ -11,11 +11,15 @@ import { TasksComponent } from './tasks.component';
     CapitalizePipe
   ],
   imports: [
+<<<<<<< HEAD
     CommonModule,
     CurrencyPipe
   ],
   exports: [
     TasksComponent
+=======
+    CommonModule
+>>>>>>> origin/main
   ]
 })
 export class TasksModule { }
