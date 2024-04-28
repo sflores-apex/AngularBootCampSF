@@ -1,0 +1,7 @@
+{{ priceTag }}:
+<span [ngClass]="{'original-price': !!offerDiscount}">
+  {{ price | roundUp | currency }}
+</span>
+<span *ngIf="!!offerDiscount" class="discount-price ms-2">
+  {{ discountPrice | currency }}
+</span>
