@@ -16,6 +16,9 @@ export class ProductListComponent {
   private offersSubject$$: Subject<boolean> = new Subject<boolean>();
   private offers$: Observable<boolean> = this.offersSubject$$.asObservable();
 
+  private filterChangeSubject$$: Subject<string> = new Subject<string>();
+  private filterChange$: Observable<string> = this.filterChangeSubject$$.asObservable();
+
   protected selectedPage: number = 1;
 
   protected products$: Observable<Item[]> = this.productsService.products$.pipe(
@@ -25,12 +28,17 @@ export class ProductListComponent {
     })
   );
 
-  protected productsOffered$: Observable<Item[]> = combineLatest({
+  protected filteredItems$: Observable<Item[]> = combineLatest({
     offers: this.offers$.pipe(startWith(false)),
     products: this.products$,
+    filterChange: this.filterChange$.pipe(startWith(''),
+      map((value: string): string => value.toLowerCase())),
   }).pipe(
-    map(({ offers, products }: { offers: boolean; products: Item[]; })
-      : Item[] => !offers ? products : products.filter(p => !!p?.offerDiscount))
+    map(({ offers, products, filterChange }: { offers: boolean; products: Item[]; filterChange: string })
+      : Item[] => {
+      const productsOffered = !offers ? products : products.filter(p => !!p?.offerDiscount);
+      return productsOffered.filter((product: Item): boolean => product.title.toLowerCase().includes(filterChange));
+    })
   );
 
   constructor(private readonly productsService: ProductsService, private dialog: MatDialog) { }
@@ -44,6 +52,10 @@ export class ProductListComponent {
     this.dialog.open(ProductFormDialogComponent, {
       disableClose: true
     });
+  }
+
+  protected filterChangeHandler(filter: string): void {
+    this.filterChangeSubject$$.next(filter);
   }
 
 }
