@@ -1,0 +1,17 @@
+.fieldset {
+  border: 1px solid cornflowerblue;
+  padding: 0 0.75em;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  &.prices {
+    border: 1px solid plum;
+  }
+
+  legend {
+    font-size: 1rem;
+    margin: 0;
+  }
+}

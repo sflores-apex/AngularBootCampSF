@@ -1,1 +1,18 @@
+@use '@angular/material' as mat;
+
 @import 'bootstrap/scss/bootstrap';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.smaller-form {
+  @include mat.form-field-density(-4);
+  @include mat.icon-button-density(-2);
+}

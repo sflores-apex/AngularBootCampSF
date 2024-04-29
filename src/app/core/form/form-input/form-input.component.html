@@ -1,0 +1,16 @@
+@if(!!formGrp){
+<ng-container [formGroup]="formGrp">
+  <mat-form-field [appearance]="appeareance" class="d-flex smaller-form">
+    <mat-label>{{ label }}</mat-label>
+    <input matInput [type]="inputType" [formControlName]="formCtrlName">
+
+    <mat-error>
+      @if (formGrp.controls[formCtrlName].hasError('required')) {
+      {{ messages.isRequired }}
+      } @else if (formGrp.controls[formCtrlName].hasError('pattern')) {
+      {{ messages.patternLettersNumbers }}
+      }
+    </mat-error>
+  </mat-form-field>
+</ng-container>
+}
